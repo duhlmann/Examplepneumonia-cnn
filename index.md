@@ -1,59 +1,38 @@
-# Pneumonia Detection with a CNN
+# Example Pneumonia CNN
 
-Welcome! This project uses a Convolutional Neural Network (CNN) to detect pneumonia from X-ray images.
+This repository contains code and resources for building a convolutional neural network (CNN) to classify pneumonia from chest X-ray images.
 
-## What's in this project?
+## Overview
 
-- **Trained Model:** `cnn_pneumonia_augmented.keras`
-- *(Optional)* Example images or results (add if available)
+Pneumonia is a serious illness that can be life-threatening, especially for young children and older adults. Early detection through medical imaging can significantly improve treatment outcomes.
 
-## What does it do?
-
-The model analyzes X-ray images and predicts if a person has pneumonia.
-
-## How did I train it?
-
-- Used a large dataset of X-ray images (both with and without pneumonia)
-- Utilized Keras and TensorFlow (Python libraries)
-- Trained the model to spot patterns indicating pneumonia
+## Features
+- **Data Preprocessing:** Techniques to prepare chest X-ray images for model training.
+- **Model Architecture:** A detailed description of the CNN architecture used.
+- **Training and Evaluation:** Instructions on how to train the model and evaluate its performance.
 
 ## Getting Started
 
-### Requirements
+To get started with this project, clone the repository and install the required dependencies:
 
-- Python 3.x
-- TensorFlow
-- Keras
-- (Optional) NumPy, Matplotlib (for image handling and visualization)
-
-### Loading the Model
-
-```python
-from tensorflow import keras
-
-model = keras.models.load_model('cnn_pneumonia_augmented.keras')
+```bash
+git clone https://github.com/yourusername/Examplepneumonia-cnn.git
+cd Examplepneumonia-cnn
+pip install -r requirements.txt
 ```
 
-### Making Predictions
+## Usage
 
-```python
-import numpy as np
-from tensorflow import keras
-from PIL import Image
+Once you have the setup ready, you can run the training script:
 
-# Load and preprocess image (resize to model input size, e.g., 224x224)
-img = Image.open('your_xray_image.jpg').resize((224, 224)).convert('L')
-img_array = np.array(img) / 255.0
-img_array = img_array.reshape(1, 224, 224, 1)  # Adjust shape as needed
-
-prediction = model.predict(img_array)
-print("Pneumonia probability:", prediction[0][0])
+```bash
+python train.py
 ```
 
-## Want to use the model?
+## Contributing
 
-Clone this repo, install the requirements, and follow the code above to make predictions on your own images!
+Contributions are welcome! Please open an issue or submit a pull request for any improvements.
 
----
+## License
 
-Feel free to add information about your dataset, training process, results, or how to contribute.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
