@@ -1,5 +1,12 @@
 # Example Pneumonia CNN
 
+A small CNN project that classifies chest X-ray images as **pneumonia** vs **normal**.
+
+- **Project page:** This page (overview & screenshots)
+- **Repository:** [github.com/duhlmann/Examplepneumonia-cnn](https://github.com/duhlmann/Examplepneumonia-cnn)
+
+# Example Pneumonia CNN
+
 This repository contains code and resources for building a convolutional neural network (CNN) to classify pneumonia from chest X-ray images.
 
 ## Overview
